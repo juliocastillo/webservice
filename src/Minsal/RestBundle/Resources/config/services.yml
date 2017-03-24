@@ -1,0 +1,4 @@
+services:
+#    minsal_rest.example:
+#        class: Minsal\RestBundle\Example
+#        arguments: ["@service_id", "plain_value", "%parameter%"]

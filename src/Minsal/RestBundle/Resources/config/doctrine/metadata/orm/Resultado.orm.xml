@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
+  <entity name="Resultado" table="resultado">
+    <indexes>
+      <index name="IDX_B2ED91C8F781FEB" columns="id_persona"/>
+    </indexes>
+    <id name="id" type="integer" column="id">
+      <generator strategy="SEQUENCE"/>
+      <sequence-generator sequence-name="resultado_id_seq" allocation-size="1" initial-value="1"/>
+    </id>
+    <field name="resultado" type="string" column="resultado" length="100" nullable="true">
+      <options>
+        <option name="fixed"/>
+        <option name="comment">resultado</option>
+      </options>
+    </field>
+    <many-to-one field="idPersona" target-entity="Persona" fetch="LAZY">
+      <join-columns>
+        <join-column name="id_persona" referenced-column-name="id"/>
+      </join-columns>
+    </many-to-one>
+  </entity>
+</doctrine-mapping>

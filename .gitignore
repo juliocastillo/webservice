@@ -1,0 +1,45 @@
+# Bootstrap
+app/bootstrap*
+
+# Composer phar
+composer.phar
+composer.lock
+
+# Symfony directories
+vendor/*
+*/logs/*
+*/cache/*
+web/uploads/*
+web/bundles/*
+src/TmpBundle/
+
+# Archivos de configuración
+app/config/parameters.ini
+app/config/parameters.yml
+
+#Carpeta nbproject de netbeans
+nbproject/
+
+#Archivos de respaldo
+*~
+
+#Archivos de solución de conflictos
+*.orig
+
+#Compilaciones de Jasper
+*.jasper
+
+#Directorio que utiliza el JasperServerReport para abrir las imagenes
+web/imagenes/*
+
+#upload files
+upload/firmaDigital/*
+
+#Vendors compresos
+*.tar.gz
+
+#Excluir los directorios
+*.directory
+
+#Excluir configuracion interfacelis
+scripts/interfacelis/configuracion.php
